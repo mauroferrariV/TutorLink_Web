@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="https://getbootstrap.com/favicon.ico">
+
+    <title>Java Web Intro</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="style/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="style/signin.css" rel="stylesheet">
+  </head>
+
+	
+  <body class="text-center">
+  	<!-- todo contenido de informacion que vaya a ser enviado al servidor debe estar dentro de un formulario -->
+  	<!-- Dentro de ese formulario incluimos todos los elementos que van a enviar informacion si incluyo un 
+  		input de texto fuera del form no podre recibir esa informacion en el servidor de aplicacion 
+  		(en el servlet o jsp que quiera recuperar esa info.)-->
+  	<!-- Dentro del form, 
+  		-el action nos indica a que url vamos a apuntar. Podemos usar cualquier página html, jsp o un servlet. Deben ir path relativos. 
+  		En este caso index.html se encuentra dentro de webapp que seria la raiz de nuestro sitio. e
+  		-el method correspondiente a los métodos HTTP (get - recupera info (si no hay nada usa get), post - enviar informacion, put - modificar informacion, delete - eliminar informacion)-->
+    <form class="form-signin" action="signin" method="post">
+      <img class="mb-4" src="style/bootstrap-solid.html" alt="" width="72" height="72">
+      <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+      <label for="inputEmail" class="sr-only">Email address</label>
+      <!-- Es muy importante definirle un name al input para poder recuperar este atributo en el servlet ya que lo hacemos a traves del name (no del id) -->
+      <input id="inputEmail" name="email" class="form-control" placeholder="Email address" required="" autofocus="" type="email">
+      <label for="inputPassword" class="sr-only">Password</label>
+      <input id="inputPassword" name="password" class="form-control" placeholder="Password" required="" type="password">
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+      <p class="mt-5 mb-3 text-muted">© 2017-2018</p>
+    </form>
+  
+
+</body></html>
